@@ -17,10 +17,6 @@ get_ipython().run_line_magic('store', '-r foodFiltered_df')
 
 
 # %%
-maleInfo[0].iloc[0,0]
-
-
-# %%
 #Males --------
 
 #Gives points to each of the restaurants based on parameters for each of the age groups and lifestyles
@@ -49,10 +45,10 @@ for i in range(len(maleInfo)): #for 1 to 3
             if (foodFiltered_df.loc[food,'Calories'] <= row['Calories per Meal']):
                 goodNutritionCounter += 1
         
-            if  (row['Protein (Cal)'] - (0.045 * maleInfo[i].iloc[index,0])) <= foodFiltered_df.iloc[food,'Protein (Cal)']) & ((row['Protein (Cal)'] + 0.045) >= foodFiltered_df.loc[food,'Protein (Cal)']) : # 
+            if  ((row['Protein (Cal)'] - (0.045 * maleInfo[i].iloc[int(index),0])) <= foodFiltered_df.iloc[food,'Protein (Cal)']) & ((row['Protein (Cal)'] + (0.045 * maleInfo[i].iloc[int(index),0])) >= foodFiltered_df.loc[food,'Protein (Cal)']) : # 
                 goodNutritionCounter += 1  
 
-            if  ((row['Carbohydrate (Cal)'] + 0.075) >= foodFiltered_df.loc[food,'Carbohydrate (Cal)']): #((row['Carbohydrate (Cal)'] - 0.075) <= foodFiltered_df.loc[food,'Carbohydrate (Cal)']) &
+            if  ((row['Carbohydrate (Cal)'] - (0.075 * maleInfo[i].iloc[index,0])) <= foodFiltered_df.loc[food,'Carbohydrate (Cal)']) & ((row['Carbohydrate (Cal)'] + (0.075 * maleInfo[i].iloc[index,0])) >= foodFiltered_df.loc[food,'Carbohydrate (Cal)']): #
                 goodNutritionCounter += 1  
                 
             if ((row['Fiber (gr)'] + 11) > foodFiltered_df.loc[food,'Fiber (gr)']): #((row['Fiber (gr)'] - 11) <= foodFiltered_df.loc[food,'Fiber (gr)']) & 
@@ -62,7 +58,7 @@ for i in range(len(maleInfo)): #for 1 to 3
             if (foodFiltered_df.loc[food,'Total Sugar (Cal)'] <= row['Total Sugar (Cal)']):
                 goodNutritionCounter += 1
 
-            if  ((row['Total lipid (Cal)'] + 2) >= foodFiltered_df.loc[food,'Total Fat (Cal)']): #((row['Total lipid (Cal)'] - 2) <= foodFiltered_df.loc[food,'Total Fat (Cal)']) &
+            if  ((row['Total lipid (Cal)'] - (0.2 * maleInfo[i].iloc[index,0])) <= foodFiltered_df.loc[food,'Total Fat (Cal)']) & ((row['Total lipid (Cal)'] + (0.2 * maleInfo[i].iloc[index,0])) >= foodFiltered_df.loc[food,'Total Fat (Cal)']): #
                 goodNutritionCounter += 1
 
             if (foodFiltered_df.loc[food,'Total Trans Fat (Cal)'] < row['Total Trans Fat (Cal)']):
