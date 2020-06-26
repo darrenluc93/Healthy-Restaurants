@@ -17,13 +17,13 @@ Data was cleansed and processed using Pandas. Nutrients values were extracted fr
 Five restaurants were chosen from the 100+ available for a more detailed analysis.
 
 
-![restaurants](images\restaurants.png)
+![restaurants](images/restaurants.png)
 
 
 
  Scores were assigned to restaurants based on whether or not their menu item met FDA standards for each nutrient. Restaurants were ranked based on their final scores.
 
-![Final Output](images\Final_Output.png)
+![Final Output](images/Final_Output.png)
 
 
 # **Conclusion**
@@ -31,8 +31,8 @@ Five restaurants were chosen from the 100+ available for a more detailed analysi
 
 And the winner is...
 
-![smoothie king](images\smoothie_king.png)
+![smoothie king](images/smoothie_king.png)
 
 Smoothie King had the highest nutrition scores across all gender/age groups. On the other hand, Jamba Juice came in last in all categories.
 
-![final chart](images\final_chart.png)
+![final chart](images/final_chart.png)
