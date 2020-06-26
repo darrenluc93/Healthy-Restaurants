@@ -8,7 +8,7 @@ Team Members: Esaa Yamini, Juan Sebastian Galindo, Avantika Singh, Darren Lucca,
 
 Data was pulled from the Nutritionix API (https://www.nutritionix.com/business/api) and compared w/ FDA standards.
 
-![Nutritionix](images\Nutritionix.png)
+![Nutritionix](images/Nutritionix.png)
 
 # **Data Processing**
 
